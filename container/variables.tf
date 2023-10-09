@@ -22,3 +22,13 @@ variable "container_path_in" {
     type = string
     description = "Path of volum for the container"
 }
+
+variable "network_name_in" {
+    type = string
+    description = "Name of network for container orchestra"
+}
+
+variable "container_env_in" {
+    type = list(map(string))
+    description = "Environment variable for the container"
+}
