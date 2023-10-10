@@ -4,7 +4,7 @@ locals {
             image = "hasura/graphql-engine"
             int_port = 8080
             ext_port = var.hasura_port
-            path = null
+            path = "/var/lib/hasura/data"
             env = [
                 {
                     "key" = "HASURA_GRAPHQL_ENABLE_CONSOLE"
@@ -16,7 +16,7 @@ locals {
                 },
                 {
                     "key" = "HASURA_GRAPHQL_DATABASE_URL"
-                    "value" = "postgres://postgres:${var.POSTGRES_PASSWORD}:${var.postgres_port}/postgres"
+                    "value" = "postgres://postgres:${urlencode(var.POSTGRES_PASSWORD)}@postgres:${var.postgres_port}/postgres"
                 }
             ]
 

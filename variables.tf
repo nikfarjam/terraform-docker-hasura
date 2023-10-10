@@ -5,7 +5,7 @@ variable "postgres_port" {
 
 variable "hasura_port" {
     type = number
-    default = 80
+    default = 8090
 }
 
 variable "POSTGRES_PASSWORD" {
