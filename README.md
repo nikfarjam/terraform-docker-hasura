@@ -1,2 +1,2 @@
-# terraform-docker-hasura
+# Docker Orchestration with Terraform
 A sample Terraform project
